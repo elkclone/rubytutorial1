@@ -3,6 +3,13 @@ Blog::Application.routes.draw do
 	resources :comments
   end
 
+  resources :products do
+        resources :name
+        resources :description
+        resources :imagelink
+        resources :price
+        resources :productnum
+   end
 
   get "home/index"
 
